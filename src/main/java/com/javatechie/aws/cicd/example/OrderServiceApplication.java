@@ -21,6 +21,7 @@ public class OrderServiceApplication {
 
     @GetMapping
     public List<Order> fetchOrders() {
+		System.out.println("hihi");
         return orderDao.getOrders().stream().
                 sorted(Comparator.comparing(Order::getPrice)).collect(Collectors.toList());
     }
